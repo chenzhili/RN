@@ -40,3 +40,5 @@ exercise react native
                     fontWeight: 'bold',
                     },
                 }
+2018/3/28
+    1、对于react-navigation的模式的注意，对于想用是StackNavigation可以进行多个的嵌套，因为他返回的也是个组件；可以在不同的 路由 header样式中设置不同的 样式，然后放到 rootRouter 中；

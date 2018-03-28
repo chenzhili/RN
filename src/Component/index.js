@@ -7,7 +7,8 @@ import {
     TouchableHighlight,
     ScrollView,
     Animated,
-    Button
+    Button,
+    Image
   } from 'react-native';
 
 export default class Index extends Component{

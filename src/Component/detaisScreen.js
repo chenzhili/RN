@@ -12,20 +12,30 @@ import {
 
 export default class DetailsScreen extends Component{
     static navigationOptions  = (...arr)=>{
-        console.log(arr);
+        // console.log(arr);
         const {navigation} = arr[0];
-        console.log(navigation);
+        // console.log(navigation);
         const title = navigation.state.params.aa;
+        const params = navigation.state.params || {};
+        // 后面的 params 的 {}必要的，因为headerBar和组件渲染不能完全保证组价先渲染完成，并且把修改的值给 header，所以可能未 undefined
         return {
             title:title,
             headerRight:(
-                <Button onPress={()=>{alert("this")}}
+                <Button onPress={params.backButtonFun}
                 title="info" color="#ff0"/>
             )
         }
     }
     constructor(props){
         super(props);
+    }
+    backButtonFun = ()=>{
+        alert("添加返回按钮事件");
+    }
+    componentWillMount(){
+        this.props.navigation.setParams(
+            {backButtonFun:this.backButtonFun}
+        );
     }
     render(){
         const params = this.props.navigation.state.params;
