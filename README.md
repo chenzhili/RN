@@ -100,3 +100,18 @@ exercise react native
 
                 IV、redux-persist 用于持久化；感觉就是用来缓存数据的；
             
+2018/4/1
+    主要是在看react native项目中遇到的东西：
+    1、就是在 容器组件 链接 UI 组件中的 写法的理解：
+        @connect(({ home }) => ({ ...home }))
+        class Home extends Component {
+            
+        }
+        对于 @connect 的理解，其实这个是 es7 出现的新语法，修饰器的理解问题；
+        在 react-redux中的本来的写法：
+          export default connect(mapStateToProps)(Home);
+        ********
+            在 修饰器中 @connect() class Home{} //修饰器 就是为了 修改 Home 类的行为的
+            等价于
+            connect()(Home); //这个就跟 上面的 写法 完全一致了；
+        *******
