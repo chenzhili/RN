@@ -115,3 +115,7 @@ exercise react native
             等价于
             connect()(Home); //这个就跟 上面的 写法 完全一致了；
         *******
+
+2018/4/9
+    1、react-native link 命令可以自动配置对应的android配置，不用手动配置但是还是要注意有些时候配置不完整，检查下
+    2、gradlew clean 重新装插件以后需要清除 以前的android编译的缓存，不然会报错，说某个文件有问题

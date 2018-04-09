@@ -3,6 +3,11 @@ package com.firstrn;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.rnfs.RNFSPackage;
+import com.reactlibrary.RNReactNativeDocViewerPackage;
+import com.yoloci.fileupload.FileUploadPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
+import com.imagepicker.ImagePickerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -22,7 +27,12 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage()
+          new MainReactPackage(),
+            new RNFSPackage(),
+            new RNReactNativeDocViewerPackage(),
+            new FileUploadPackage(),
+            new VectorIconsPackage(),
+            new ImagePickerPackage()
       );
     }
 
