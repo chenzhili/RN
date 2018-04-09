@@ -3,6 +3,6 @@ import { AppRegistry } from 'react-native';
 // 包括 StackNavigation,TabNavigation的用法
 import App from "./src";
 //抽屉导航
-// import MyApp from "./src/index_drawerNavigation";
+// import MyApp from "./src/index_drawerNavigation"; 
 
-AppRegistry.registerComponent('firstRN', () => App);
+AppRegistry.registerComponent('firstRN', () => MyApp);
