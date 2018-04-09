@@ -19,6 +19,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
   import DetailsScreen from "./Component/detaisScreen"
   import Setting from "./Component/setting";
 
+  
+
 const Router = StackNavigator(
     {
         Index:{
@@ -129,24 +131,24 @@ const Router = StackNavigator(
       headerMode: 'none',
     }
   ); */
-// export default function App(){
-//     return (
-//         <RootStack/>
-//     )
-// }
+/* export default function App(){
+    return (
+        <RootStack/>
+    )
+}
 
-// class HomeScreen extends React.Component {
-//     componentWillMount(){
-//         console.dir(Ionicons); 
-//     }
-//     render() {
-//       return (
-//         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-//           <Text>Home!</Text>
-//         </View>
-//       );
-//     } 
-//   }
+class HomeScreen extends React.Component {
+    componentWillMount(){
+        console.dir(Ionicons); 
+    }
+    render() {
+      return (
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          <Text>Home!</Text>
+        </View>
+      );
+    } 
+  } */
   
   class SettingsScreen extends React.Component {
     render() {
