@@ -119,3 +119,13 @@ exercise react native
 2018/4/9
     1、react-native link 命令可以自动配置对应的android配置，不用手动配置但是还是要注意有些时候配置不完整，检查下
     2、gradlew clean 重新装插件以后需要清除 以前的android编译的缓存，不然会报错，说某个文件有问题
+2018/4/17
+    1、在 RN中 对于android的物理返回键的运用；
+        注意点：
+            I、监听函数是按倒序的顺序执行（即后添加的函数先执行）。如果某一个函数返回true，则后续的函数都不会被调用。
+            II、当 监听函数返回的值不同有不同的影响：
+                true:表示不执行默认事件，就是返回默认事件也不会执行
+                false:会执行默认的返回事件
+        http地址：http://bbs.reactnative.cn/topic/480/%E5%AE%89%E5%8D%93back%E9%94%AE%E7%9A%84%E5%A4%84%E7%90%86-%E5%9F%BA%E6%9C%AC-%E9%AB%98%E7%BA%A7%E7%AF%87
+        
+    2、对于 react-navigation的高级理解(今天没时间搞了，这周必须弄了)
