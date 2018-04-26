@@ -129,3 +129,20 @@ exercise react native
         http地址：http://bbs.reactnative.cn/topic/480/%E5%AE%89%E5%8D%93back%E9%94%AE%E7%9A%84%E5%A4%84%E7%90%86-%E5%9F%BA%E6%9C%AC-%E9%AB%98%E7%BA%A7%E7%AF%87
         
     2、对于 react-navigation的高级理解(今天没时间搞了，这周必须弄了)
+
+2018/4/25
+    1、拥有tabs底部导航的时候，在软件盘弹出的时候会导致，页面整体被压缩的解决；
+    就是在 AndroidManifest.xml中的 activity标签中加入
+    android:windowSoftInputMode="stateAlwaysHidden|adjustPan";
+    https://blog.csdn.net/u011690583/article/details/53808773
+
+2018/4/26
+    1、对于 打包 报错：
+    Error:Execution failed for task ':app:transformClassesWithDexForDebug'.
+        解决：
+        这个问题是说：打包的时候出现了相同的 jar 包；
+        这个可能是真的存在两个，但是在我操作中，是由于我删除了 某个 react-native的插件，但是缓存中可能还是存在，所以打包失败；
+            这个时候:就直接删除 android 中有关于 build的文件，在打包；
+
+            <!-- 遇到这种问题不要急，首先先检查以下项目的jar，看看有没有重复的，其次在看看依赖的项目引用有没有重复的。这都不行就在主项目的build.gradle里面加这句
+            multiDexEnabled true 有时候会有缓存，试着删除主项目的build文件重新跑 -->

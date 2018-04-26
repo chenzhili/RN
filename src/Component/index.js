@@ -107,6 +107,7 @@ export default class Index extends Component{
         });
     }
     render(){
+        console.log(this.props);
         return (
             <View>
                 <Text>首页test</Text>
