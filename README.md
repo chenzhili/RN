@@ -146,3 +146,13 @@ exercise react native
 
             <!-- 遇到这种问题不要急，首先先检查以下项目的jar，看看有没有重复的，其次在看看依赖的项目引用有没有重复的。这都不行就在主项目的build.gradle里面加这句
             multiDexEnabled true 有时候会有缓存，试着删除主项目的build文件重新跑 -->
+
+2018/5/3
+    1、对于 react-native 修改包名的流程和需要注意的问题
+        I、就是 android/app/build.gradle文件里的applicationId；
+        II、android/app/src/main/AndroidManifest.xml的package；
+        III、在android/app/src/main/java/com下创建 对应的包名的文件夹，并且把以前的java复制到里面，并且改变 两个java里对于 有关的引用
+        IV、修改打包脚本文件ceshiApp/android/app/BUCK 里相关的 包名
+        最重要的是：
+        V、对于 在初始化 react-native的时候，需要修改对应的包名，形如：
+            AppRegistry.registerComponent('firstRN', () => App);中对应的 firstRN这里就是注册app的入口

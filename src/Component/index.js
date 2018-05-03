@@ -12,7 +12,8 @@ import {
     TouchableWithoutFeedback
   } from 'react-native';
 /* 图片引用 */
-const ImagePicker = require('react-native-image-picker');
+// const ImagePicker = require('react-native-image-picker');
+import ImagePicker from 'react-native-image-crop-picker';
 const FileUpload = require('NativeModules').FileUpload;
 const options = {
     title: '选择图片', 
@@ -54,33 +55,38 @@ export default class Index extends Component{
     isShowImage(e){
         console.log(ImagePicker);
         console.log(options);
-        /* ImagePicker.launchCamera(options, (response)  => {
-            // Same code as in above section!
-            console.log(response);
-          }); */
-        ImagePicker.showImagePicker(options, (response) => {
-            console.log('Response = ', response);
+        ImagePicker.openPicker({
+            multiple: true
+          }).then(images => {
+            console.log(images);
+        });
+        // /* ImagePicker.launchCamera(options, (response)  => {
+        //     // Same code as in above section!
+        //     console.log(response);
+        //   }); */
+        // ImagePicker.showImagePicker(options, (response) => {
+        //     console.log('Response = ', response);
             
-            if (response.didCancel) {
-              console.log('User cancelled image picker');
-            }
-            else if (response.error) {
-              console.log('ImagePicker Error: ', response.error);
-            }
-            else if (response.customButton) {
-              console.log('User tapped custom button: ', response.customButton);
-            }
-            else {
-              let source = { uri: response.uri };
+        //     if (response.didCancel) {
+        //       console.log('User cancelled image picker');
+        //     }
+        //     else if (response.error) {
+        //       console.log('ImagePicker Error: ', response.error);
+        //     }
+        //     else if (response.customButton) {
+        //       console.log('User tapped custom button: ', response.customButton);
+        //     }
+        //     else {
+        //       let source = { uri: response.uri };
           
-              // You can also display the image using data:
-              // let source = { uri: 'data:image/jpeg;base64,' + response.data };
-            console.log(source);
-              this.setState({
-                uri: source
-              });
-            }
-          });
+        //       // You can also display the image using data:
+        //       // let source = { uri: 'data:image/jpeg;base64,' + response.data };
+        //     console.log(source);
+        //       this.setState({
+        //         uri: source
+        //       });
+        //     }
+        //   });
     }
     getDir(){
         RNFS.readDir(RNFS.DocumentDirectoryPath) // On Android, use "RNFS.DocumentDirectoryPath" (MainBundlePath is not defined)
