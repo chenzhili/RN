@@ -3,6 +3,7 @@ package com.firstrn;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.reactnative.ivpusic.imagepicker.PickerPackage;
 import com.rnfs.RNFSPackage;
 import com.reactlibrary.RNReactNativeDocViewerPackage;
 import com.yoloci.fileupload.FileUploadPackage;
@@ -28,6 +29,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new PickerPackage(),
             new RNFSPackage(),
             new RNReactNativeDocViewerPackage(),
             new FileUploadPackage(),
