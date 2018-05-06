@@ -156,3 +156,11 @@ exercise react native
         最重要的是：
         V、对于 在初始化 react-native的时候，需要修改对应的包名，形如：
             AppRegistry.registerComponent('firstRN', () => App);中对应的 firstRN这里就是注册app的入口
+
+
+2018/5/6
+    1、对于文件的上传下载，目前最优的解决插件地址：
+        react-native-fetch-blob （需要好好地测试下）
+
+        https://github.com/joltup/react-native-fetch-blob#user-content-upload-example--dropbox-files-upload-api
+
