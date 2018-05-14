@@ -9,7 +9,7 @@ import {
     ScrollView,
     Animated,
     Button
-} from 'react-native';
+} from 'react-native'; 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 //这里想集成 ionic 的 icons需要的配置比较多，先不管，这周弄一哈
 /* https://blog.csdn.net/yeputi1015/article/details/70331912 */

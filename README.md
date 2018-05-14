@@ -157,6 +157,12 @@ exercise react native
         V、对于 在初始化 react-native的时候，需要修改对应的包名，形如：
             AppRegistry.registerComponent('firstRN', () => App);中对应的 firstRN这里就是注册app的入口
 
+2018/5/6
+    1、对于文件的上传下载，目前最优的解决插件地址：
+        react-native-fetch-blob （需要好好地测试下）
+
+        https://github.com/joltup/react-native-fetch-blob#user-content-upload-example--dropbox-files-upload-api
+        
 2018/5/14
     1、对于插件react-native-fetch-blob在android的8.0.0版本上调取相机闪退的问题；
         由于在新版本中获取 的路径发生了变化导致的：
@@ -186,3 +192,6 @@ exercise react native
 
         如果上面配置报错了如：A problem occurred configuring project ':app'. > Could not resolve all dependencies for configuration ':app:_debugApk'.    > Configuration with name 'default' not found.
         这个可以尝试下安装react-native-image-picker这个插件
+
+
+
